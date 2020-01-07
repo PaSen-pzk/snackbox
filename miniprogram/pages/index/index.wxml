@@ -1,0 +1,57 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class="index">
+
+  <swiper class="index-swiper" indicator-dots="{{true}}" autoplay="{{false}}" circular="{{true}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="index-tab">
+    <view class="active">推荐</view>
+    <view>最新</view>
+  </view>
+  <view class="index-list">
+    <view class="index-list-item">
+      <image mode="aspectFill" src="../../images/swiper/photo-1551214012-84f95e060dee.jpg"/>
+      <view class="index-list-text">
+        <text>小喵喵</text>
+        <text>
+          <text class="iconfont iconjushoucang"></text>
+          <text>1000</text>
+        </text>
+      </view>
+    </view>
+    <view class="index-list-item">
+      <image mode="aspectFill" src="../../images/swiper/photo-1551214012-84f95e060dee.jpg"/>
+      <view class="index-list-text">
+        <text>下一站</text>
+        <text>
+          <text class="iconfont iconjushoucang"></text>
+          <text>245</text>
+        </text>
+      </view>
+    </view>
+    <view class="index-list-item">
+      <image mode="aspectFill" src="../../images/swiper/photo-1551214012-84f95e060dee.jpg"/>
+      <view class="index-list-text">
+        <text>詹皇</text>
+        <text>
+          <text class="iconfont iconjushoucang"></text>
+          <text>889</text>
+        </text>
+      </view>
+    </view>
+    <view class="index-list-item">
+      <image mode="aspectFill" src="../../images/swiper/photo-1551214012-84f95e060dee.jpg"/>
+      <view class="index-list-text">
+        <text>大脸怪</text>
+        <text>
+          <text class="iconfont iconjushoucang"></text>
+          <text>89</text>
+        </text>
+      </view>
+    </view>
+  </view>
+</view>

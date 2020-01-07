@@ -1,0 +1,5 @@
+<!--miniprogram/pages/profile/editProfile/name/name.wxml-->
+<!-- <button bindtap="handleName">设置昵称</button> -->
+<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">使用微信昵称</button>
+<button bindtap="handleName">自定义昵称</button>
+<input type="number" value="{{nickName}}" bindinput="handleinput"/>

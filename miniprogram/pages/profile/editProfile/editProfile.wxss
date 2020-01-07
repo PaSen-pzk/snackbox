@@ -1,0 +1,6 @@
+/* miniprogram/pages/profile/editProfile/editProfile.wxss */
+
+.editProfile{ margin-top: 40rpx;}
+.editProfile-list-item{ height: 50rpx; border-bottom: 1px #b4b5b6 dashed; padding: 10rpx;display: flex; align-items: center; justify-content: space-between;}
+.editProfile-list-tips{font-size: 12px;color: red;}
+

@@ -1,0 +1,5 @@
+<!--miniprogram/pages/profile/editProfile/phone/phone.wxml-->
+<view class="phone">
+  <button bindtap="handlePhone">设置手机号</button>
+  <input type="number" value="{{phoneNumber}}" bindinput="handleinput"/>
+</view>

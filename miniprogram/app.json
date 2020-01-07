@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/profile/profile",
+    "pages/order/order",
+    "pages/profile/editProfile/editProfile",
+    "pages/profile/frendList/friendList",
+    "pages/profile/profileDetail/profileDetail",
+    "pages/profile/editProfile/head/head",
+    "pages/profile/editProfile/name/name",
+    "pages/profile/editProfile/signature/signature",
+    "pages/profile/editProfile/addr/addr",
+    "pages/profile/editProfile/weixin/weixin",
+    "pages/profile/editProfile/phone/phone"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#937bf5",
+    "navigationBarTitleText": "零食盒子",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#dbdbdb",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "iconPath": "images/tabbar/list.png",
+        "selectedIconPath": "images/tabbar/list_active.png",
+        "pagePath": "pages/index/index",
+        "text": "商品"
+      },
+      {
+        "iconPath": "images/tabbar/cart.png",
+        "selectedIconPath": "images/tabbar/cart_active.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "images/tabbar/order.png",
+        "selectedIconPath": "images/tabbar/order_active.png",
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },
+      {
+        "iconPath": "images/tabbar/profile.png",
+        "selectedIconPath": "images/tabbar/profile_active.png",
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
