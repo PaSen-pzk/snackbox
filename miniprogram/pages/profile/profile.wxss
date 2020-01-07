@@ -1,6 +1,6 @@
 /* miniprogram/pages/profile/profile.wxss */
 .user-info{height: 158rpx; border: 1px #b4b5b6 solid; border-left: none; border-right: none;display: flex; align-items: center;}
-.user-info image{ width: 150rpx; height: 150rpx; border-radius: 58%; overflow: hidden;margin: 0 20rpx;}
+.user-info image{ width: 139rpx; height: 139rpx; border-radius: 58%; overflow: hidden;margin: 0 20rpx;}
 .user-info text{margin-left: 10rpx;}
 .user-info button{margin: 0; margin-left: 10rpx;}
 

@@ -56,6 +56,12 @@
 					"pathName": "pages/profile/profile",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/editProfile/addr/addr",
+					"pathName": "pages/profile/editProfile/addr/addr",
+					"scene": null
 				}
 			]
 		}

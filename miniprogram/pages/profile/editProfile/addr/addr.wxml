@@ -1,5 +1,13 @@
 <!--miniprogram/pages/profile/editProfile/addr/addr.wxml-->
-<view>
-  <text>开启共享位置：</text>
-  <switch checked="{{isLocation}}" bindchange="switchChange"/>
+<view class="addr">
+  <view class="addr-item">
+    <view  class="addr-title">
+      <text>开启共享位置：</text>
+    </view>
+    <view class="addr-switch">
+      <switch checked="{{isLocation}}" bindchange="switchChange"/>
+    </view>
+  
+  </view>
+  
 </view>

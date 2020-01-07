@@ -5,7 +5,6 @@
     "pages/profile/profile",
     "pages/order/order",
     "pages/profile/editProfile/editProfile",
-    "pages/profile/frendList/friendList",
     "pages/profile/profileDetail/profileDetail",
     "pages/profile/editProfile/head/head",
     "pages/profile/editProfile/name/name",

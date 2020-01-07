@@ -1,11 +1,15 @@
 // miniprogram/pages/profile/editProfile/weixin/weixin.js
+
+const app = getApp();
+const db = wx.cloud.database();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    weixinNumber: '',
   },
 
   /**
@@ -19,7 +23,35 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.setData({
+      weixinNumber: app.userInfo.weixinNumber,
+    })
+  },
 
+  handleWeixin(){
+    this.updateWeixinNumber();
+  },
+  updateWeixinNumber() {
+    wx.showLoading({
+      title: '更新中',
+    })
+    db.collection('users').doc(app.userInfo._id).update({
+      data: {
+        weixinNumber: this.data.weixinNumber,
+      }
+    }).then(res => {
+      wx.hideLoading();
+      wx.showToast({
+        title: '更新成功',
+      });
+      app.userInfo.weixinNumber = this.data.weixinNumber;
+    });
+  },
+  handleinput(ev){
+    let value = ev.detail.value;
+    this.setData({
+      weixinNumber: value,
+    })
   },
 
   /**
