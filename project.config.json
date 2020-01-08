@@ -61,6 +61,21 @@
 					"id": -1,
 					"name": "pages/profile/editProfile/addr/addr",
 					"pathName": "pages/profile/editProfile/addr/addr",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "pages/detail/detail",
+					"pathName": "pages/detail/detail",
+					"query": "userId=8d1e75855e158b860039185d60ecdd2e",
 					"scene": null
 				}
 			]

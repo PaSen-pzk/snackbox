@@ -1,1 +1,6 @@
 /* miniprogram/pages/profile/editProfile/head/head.wxss */
+
+.head{ margin: 10rpx;display: flex;}
+.head-item{ flex: 1;margin-left: 10rpx;}
+.head-item button{ width: 100%;}
+image{ width: 139rpx; height: 139rpx; border-radius: 58%; overflow: hidden;margin: 0 20rpx;}

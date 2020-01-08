@@ -16,7 +16,7 @@ Page({
   },
   bindGetUserInfo(ev){
     // console.log("获取用户信息");
-    // console.log(ev);
+    console.log(ev);
     let userInfo = ev.detail.userInfo;
     if (!this.data.logged && userInfo){
       db.collection('users').add({
@@ -62,7 +62,7 @@ Page({
     }).then(res => {
       // console.log('结果'+JSON.stringify(res));
       db.collection('users').where({
-        _openid: res.result._openid
+        _openid: res.result.openid
       }).get().then(res => {
         if(res.data.length){
           app.userInfo = Object.assign(app.userInfo, res.data[0]);

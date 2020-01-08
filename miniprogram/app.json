@@ -11,7 +11,8 @@
     "pages/profile/editProfile/signature/signature",
     "pages/profile/editProfile/addr/addr",
     "pages/profile/editProfile/weixin/weixin",
-    "pages/profile/editProfile/phone/phone"
+    "pages/profile/editProfile/phone/phone",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
