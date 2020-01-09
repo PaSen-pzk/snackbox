@@ -15,11 +15,13 @@
   <view class="detail-item">
     <text>手机号：</text>
     <text>{{detail.phoneNumber}}</text>
+    <call-phone phoneNumber="{{detail.phoneNumber}}"></call-phone>
   </view>
   <view class="detail-item">
     <text>微信号：</text>
     <text>{{detail.weixinNumber}}</text>
+    <copy-text copyText="{{detail.weixinNumber}}"/>
   </view>
     <button wx:if="{{ isFriend }}">已是好友</button>
-    <button wx:else>添加好友</button>
+    <button bindtap="handleAddFriend" wx:else>添加好友</button>
 </view>

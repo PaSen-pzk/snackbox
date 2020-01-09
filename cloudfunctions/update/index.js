@@ -14,6 +14,15 @@ exports.main = async (event, context) => {
     if(typeof event.data == 'string') {
       event.data = eval('('+event.data+')'); //将字符串转化为 js 代码
     }
+    if(event.where){
+      return await db.collection(event.collection)
+      .where(event.where)
+      .update({
+        data: {
+          ...event.data
+        },
+      })
+    }
     return await db.collection(event.collection).doc(event.doc)
       .update({
         data: {

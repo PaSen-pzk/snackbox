@@ -1,6 +1,7 @@
 // miniprogram/pages/detail/detail.js
 
 const db = wx.cloud.database();
+const app = getApp()
 
 Page({
 
@@ -77,5 +78,51 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  //添加好友操作
+  handleAddFriend(){
+    let userId = app.userInfo._id;
+    if(userId){      //登录 
+      let friendId = this.data.detail._id;
+      db.collection('messages')
+      .where({
+        userId: friendId
+      })
+      .get()
+      .then(res => {
+        if(res.data.length){  //更新
+          wx.cloud.callFunction({
+            name: 'update',
+            data: {
+              collection: 'messages',
+              where: {
+                userId: friendId
+              },
+              data: `{list: _.unshift('$app.userInfo._id')}`
+
+            }
+          })
+        }else{   //添加
+          db.collection('messages').add({
+            data: {
+              userId: friendId,
+              list: [userId]
+            }
+          }).then(res1 => {
+            wx.showToast({
+              title: '已提交申请',
+            })
+          })
+        }
+      })
+      
+    }else{   //未登录
+    //跳转登录界面
+    //tabbar页面跳转
+      wx.switchTab({
+        url: '/pages/profile/profile'
+      })
+
+    }
   }
 })

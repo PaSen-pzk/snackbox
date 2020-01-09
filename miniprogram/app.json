@@ -12,7 +12,8 @@
     "pages/profile/editProfile/addr/addr",
     "pages/profile/editProfile/weixin/weixin",
     "pages/profile/editProfile/phone/phone",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "components/callPhone/callPhone"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
