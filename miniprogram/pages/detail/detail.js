@@ -17,7 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(options);
+    console.log(options);
     //获取指定userID的数据
     let userId = options.userId;
     db.collection('users')
@@ -98,7 +98,7 @@ Page({
               where: {
                 userId: friendId
               },
-              data: `{list: _.unshift('$app.userInfo._id')}`
+              data: '{list: _.unshift('+app.userInfo._id+')}'
 
             }
           })

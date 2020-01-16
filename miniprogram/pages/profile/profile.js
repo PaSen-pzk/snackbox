@@ -41,8 +41,41 @@ Page({
             logged: true
           })
         })
+        
       });
     }
+  },
+  /**
+   * 登录后获取信息
+   */
+  getMessages(){
+    // console.log(app.userInfo)
+    db.collection('messages')
+    .where({
+      userId: app.userInfo._id
+    })
+    .watch({
+      onChange: function (snapshot) {
+       if(snapshot.docChanges.length){
+         let list = snapshot.docChanges[0].doc.list
+         if(list.length){
+           console.log('*************')
+           wx.showTabBarRedDot({
+             index: 2
+           });
+           app.userMessages = list
+         }else{
+           wx.hideTabBarRedDot({
+             index: 2
+           });
+           app.userMessages = []
+         }
+       }
+      },
+      onError: function (err) {
+
+      }
+    })
   },
 
   /**
@@ -71,14 +104,15 @@ Page({
             nickName: app.userInfo.nickName,
             logged: true
           })
+          console.log(app.userInfo)
         }else{
           this.setData({
             disabled: false
           })
         }
-        
-      })
-       
+        this.getMessages();
+      });
+      
     })
   },
 
